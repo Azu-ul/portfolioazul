@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Azul Sofía David | Remote Virtual Assistant for Administration · Data · Research · Administrative Support</title>
+  <meta name="description" content="Azul Sofía David is a remote virtual assistant based in Argentina, focused on research, data organization, administrative support and customer support for international clients.">
+  <meta name="author" content="Azul Sofía David">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Azul Sofía David, Remote Virtual Assistant">
+  <meta property="og:description" content="Research, data, administration and customer support for international clients, working remotely from Argentina.">
+  <meta property="og:image" content="[PROJECT URL]/og-image.jpg">
+  <meta property="og:url" content="[PROJECT URL]">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%232A2822'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='26' fill='%23F2ECDE' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #FFFFFF;
+      --card: #FFFFFF;
+      --ink: #4A3826;
+      --ink-soft: #362e26;
+      --accent: #745235;
+      --line: #DCCFBC;
+      --max: 1120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box }
+
+    html { scroll-behavior: auto }
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth }
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Public Sans', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block }
+    a { color: inherit }
+
+    h1, h2, h3, h4 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      line-height: 1.15;
+      margin: 0;
+      color: var(--ink);
+    }
+
+    p { margin: 0 }
+    ul { margin: 0; padding: 0; list-style: none }
+    button { font: inherit; color: inherit; background: none; border: none; cursor: pointer }
+
+    .container {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 3rem);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -3rem;
+      background: var(--ink);
+      color: var(--paper);
+      padding: .6rem 1rem;
+      z-index: 100;
+      transition: top .15s ease;
+    }
+    .skip-link:focus { top: 1rem }
+
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: saturate(140%) blur(6px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: 1.1rem;
+    }
+
+    .nav-brand {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.15rem;
+      text-decoration: none;
+      letter-spacing: .01em;
+    }
+
+    .nav-toggle { display: inline-flex; flex-direction: column; gap: 5px; padding: .4rem; }
+    .nav-toggle span { width: 22px; height: 2px; background: var(--ink); display: block; }
+
+    .nav-menu {
+      position: fixed;
+      inset: 0 0 0 30%;
+      background: var(--paper);
+      border-left: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.75rem;
+      padding: 2rem clamp(1.5rem, 6vw, 3rem);
+      transform: translateX(100%);
+      transition: transform .28s ease;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .nav-menu { transition: none }
+    }
+    .nav-menu.is-open { transform: translateX(0) }
+    .nav-menu a { text-decoration: none; font-size: 1.4rem; font-family: 'Fraunces', serif; }
+
+    body.nav-open { overflow: hidden }
+
+    @media (min-width:820px) {
+      .nav-toggle { display: none }
+      .nav-menu {
+        position: static;
+        inset: auto;
+        transform: none;
+        flex-direction: row;
+        align-items: center;
+        gap: clamp(1.25rem, 3vw, 2.25rem);
+        background: none;
+        border: none;
+        padding: 0;
+        justify-content: flex-end;
+      }
+      .nav-menu a { font-size: .98rem; font-family: 'Public Sans', sans-serif; font-weight: 500 }
+    }
+
+    /* ---------- Buttons / links ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      border: 1px solid var(--ink);
+      padding: .75rem 1.4rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: .95rem;
+    }
+    .btn:hover { background: var(--ink); color: var(--paper) }
+
+    .btn-quiet { border-color: var(--accent); color: var(--ink-soft); }
+    .btn-quiet:hover { background: var(--ink); color: var(--paper) }
+
+    .text-link { text-decoration-color: var(--accent); text-underline-offset: 4px; color: var(--ink); font-weight: 500; }
+
+    /* ---------- Sections ---------- */
+    section { padding-block: clamp(3.5rem, 9vw, 6.5rem) }
+
+    .section-head { max-width: 640px; margin-bottom: clamp(2rem, 5vw, 3rem); }
+    .section-head p { color: var(--ink-soft); margin-top: .85rem }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      padding-top: clamp(3rem, 8vw, 5rem);
+      background-image: url(/hero.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .hero .container { display: grid; gap: 2.5rem; align-items: center; }
+    @media (min-width:900px) {
+      .hero .container { grid-template-columns: 1.15fr .85fr; gap: 3.5rem }
+    }
+
+    .hero-copy { animation: rise .6s ease both; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px) }
+      to { opacity: 1; transform: none }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-copy { animation: none }
+    }
+
+    .hero-role { font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--ink-soft); margin-top: .5rem; }
+    .hero h1 { font-size: clamp(2.75rem, 7vw, 4.75rem) }
+    .hero-tagline { margin-top: 1.5rem; font-size: .95rem; letter-spacing: .02em; color: var(--accent); font-weight: 600; }
+    .hero-intro { margin-top: 1.5rem; max-width: 46ch; font-size: 1.08rem; color: var(--ink-soft); }
+    .hero-location { margin-top: 1rem; font-size: .9rem; color: var(--ink-soft); }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.25rem; }
+
+    .hero-visual {
+      aspect-ratio: 4/5;
+      border: 1px solid var(--line);
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      font-size: .85rem;
+      text-align: center;
+      padding: 1rem;
+      overflow: hidden;
+    }
+    .hero-visual.has-image { padding: 0 }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover }
+
+    /* ---------- About ---------- */
+    .about { background: var(--paper); border-top: 1px solid var(--line); }
+    .about .container { display: grid; gap: 2.5rem; }
+    @media (min-width:900px) {
+      .about .container { grid-template-columns: .8fr 1.2fr; gap: 3.5rem; align-items: start }
+    }
+
+    .about-visual {
+      border: 1px solid var(--line);
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      font-size: .85rem;
+      text-align: center;
+      padding: 1rem;
+      overflow: hidden;
+    }
+    .about-visual.has-image { padding: 0 }
+    .about-visual img { width: 500px; height: 350px; object-fit: cover }
+
+    .about-copy p { margin-bottom: 1.15rem; color: var(--ink-soft); max-width: 60ch }
+    .about-copy p:last-child { margin-bottom: 0 }
+    .about-copy strong { color: var(--ink); font-weight: 600 }
+
+    /* ---------- Skills & Work ---------- */
+    .work { background: var(--paper); border-top: 1px solid var(--line) }
+
+    .work-entry {
+      border-top: 1px solid var(--line);
+      padding-block: clamp(2rem, 4vw, 2.75rem);
+      display: grid;
+      gap: 1.5rem;
+    }
+    .work-entry:last-of-type { border-bottom: 1px solid var(--line) }
+    @media (min-width:900px) {
+      .work-entry { grid-template-columns: .8fr 1.15fr .85fr; gap: 2rem; align-items: center }
+    }
+
+    .work-ability h3 { font-size: 1.5rem }
+    .work-ability p { color: var(--ink-soft); margin-top: .6rem; max-width: 42ch }
+
+    .work-visual { aspect-ratio: 16 / 10; border: 1px solid var(--line); background: var(--paper); overflow: hidden; }
+    .work-visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+    .work-visual img:hover { transform: scale(1.02); }
+
+    .work-project { background: var(--card); border: 1px solid var(--line); padding: 1.25rem; }
+    .work-project-label { font-size: .78rem; color: var(--accent); font-weight: 600; margin-bottom: .4rem; }
+    .work-project h4 { font-size: 1.05rem; margin-bottom: .5rem }
+    .work-project p { color: var(--ink-soft); font-size: .95rem; margin-bottom: 1rem }
+
+    .additional-skills { margin-top: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--line); padding-top: 2rem; }
+    .additional-skills h3 { font-size: 1.1rem; margin-bottom: 1rem }
+    .additional-skills ul { display: flex; flex-wrap: wrap; gap: .6rem }
+    .additional-skills li { font-size: .85rem; color: var(--ink-soft); border: 1px solid var(--line); padding: .35rem .75rem; }
+
+    /* ---------- Education & Languages ---------- */
+    .education { border-top: 1px solid var(--line) }
+
+    .info-grid { display: grid; gap: 3rem; }
+    @media (min-width:760px) {
+      .info-grid { grid-template-columns: 1fr 1fr }
+    }
+
+    .info-block h2 { font-size: clamp(1.6rem, 3vw, 2rem); margin-bottom: 1.5rem }
+
+    .edu-item h3 { font-size: 1.2rem }
+    .edu-item .meta { color: var(--ink-soft); font-size: .9rem; margin-top: .3rem }
+    .edu-item p { color: var(--ink-soft); margin-top: .85rem; max-width: 50ch }
+
+    .lang-item { border-top: 1px solid var(--line); padding-block: 1.1rem; }
+    .lang-item:last-child { border-bottom: 1px solid var(--line) }
+    .lang-item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+    .lang-item-head h3 { font-size: 1.1rem }
+    .lang-item-head span { color: var(--ink-soft); font-size: .9rem }
+    .lang-detail { margin-top: .6rem; display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; font-size: .85rem; color: var(--ink-soft); }
+
+    /* ---------- Contact ---------- */
+    .contact { background: var(--paper); color: var(--ink); border-top: 1px solid var(--line) }
+    .contact h2 { color: var(--ink); font-size: clamp(2rem, 5vw, 3rem) }
+    .contact-copy { max-width: 52ch; margin-top: 1.25rem; color: var(--ink-soft); }
+
+    .contact-grid { margin-top: 2.75rem; display: grid; gap: 1.75rem; }
+    @media (min-width:640px) {
+      .contact-grid { grid-template-columns: repeat(3, 1fr) }
+    }
+
+    .contact-item .label { font-size: .78rem; color: var(--ink-soft); margin-bottom: .5rem; }
+    .contact-item a, .contact-item span { font-size: 1.05rem; text-decoration-color: var(--accent); text-underline-offset: 4px; }
+
+    .contact-cta { margin-top: 2.75rem }
+
+    /* ---------- Footer ---------- */
+    .site-footer { background: var(--paper); color: var(--ink-soft); border-top: 1px solid var(--line); padding-block: 2.5rem; font-size: .85rem; }
+    .site-footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+    .footer-brand { color: var(--ink); font-family: 'Fraunces', serif; font-style: italic; font-size: 1.1rem }
+    .footer-meta p { margin-bottom: .35rem }
+    .footer-meta a { text-decoration-color: var(--accent); text-underline-offset: 3px }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#hero" class="nav-brand">Azul Sofía David</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-copy">
+          <p class="hero-role">Remote Virtual Assistant</p>
+          <h1>Azul Sofía David</h1>
+          <p class="hero-tagline">Administration · Data · Research · Administrative Support</p>
+          <p class="hero-intro">
+            Highly organized and detail oriented remote professional focused on research,
+            data organization, administrative support, and e-commerce.
+          </p>
+          <p class="hero-location">Argentina, available for international remote work.</p>
+          <div class="hero-ctas">
+            <a href="#work" class="btn">View work</a>
+            <a href="#contact" class="btn btn-quiet">Contact me</a>
+          </div>
+        </div>
+
+        <div class="hero-visual has-image">
+          <img src="/profileazu.jpeg" alt="Portrait of Azul Sofía David">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-visual has-image">
+          <img src="/workingazu.jpeg" alt="Azul Sofía David working">
+        </div>
+
+        <div class="about-copy">
+          <h2 style="margin-bottom:1.5rem;font-size:clamp(1.8rem,4vw,2.5rem)">About</h2>
+
+          <p>
+            I enjoy working with information. Researching, organizing, and finding practical
+            solutions to make complex tasks simpler is where I do my best work.
+          </p>
+          <p>
+            I pick up new tools and workflows quickly, and I am comfortable managing my own
+            schedule and priorities without close supervision.
+          </p>
+          <p>
+            I am currently focused on bringing these skills to virtual assistance and
+            administrative support work for international clients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THINGS I CAN HANDLE FOR YOU -->
+    <section id="work" class="work">
+      <div class="container">
+        <div class="section-head">
+          <h2 style="font-size:clamp(1.8rem,4vw,2.5rem)">Things I Can Handle For You</h2>
+          <p>Practical support to help you stay organized, save time, and keep your day-to-day work moving.</p>
+        </div>
+
+        <div class="work-entry">
+          <div class="work-ability">
+            <h3>Inbox &amp; Email Management</h3>
+            <p>Keep your inbox organized, prioritize important messages, and make sure nothing gets overlooked.</p>
+          </div>
+          <div class="work-visual">
+            <img src="images/email.jpg" alt="Organized email inbox interface">
+          </div>
+          <div class="work-project">
+            <p class="work-project-label">Support</p>
+            <h4>Clearer, more organized communication</h4>
+            <p>Organizing emails, identifying priorities, and helping keep communication manageable and up to date.</p>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="work-ability">
+            <h3>Calendar &amp; Scheduling</h3>
+            <p>Manage appointments, meetings, deadlines, reminders, and schedules while keeping everything organized and conflict-free.</p>
+          </div>
+          <div class="work-visual">
+            <img src="images/calendar.jpg" alt="Organized calendar and scheduling interface">
+          </div>
+          <div class="work-project">
+            <p class="work-project-label">Support</p>
+            <h4>Organized schedules</h4>
+            <p>Helping keep appointments, meetings, deadlines, and important commitments structured and easy to track.</p>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="work-ability">
+            <h3>Internet Research</h3>
+            <p>Find, compare, and organize relevant information from reliable online sources so you can make informed decisions faster.</p>
+          </div>
+          <div class="work-visual">
+            <img src="images/research.png" alt="Online research and information comparison interface">
+          </div>
+          <div class="work-project">
+            <p class="work-project-label">Support</p>
+            <h4>Research &amp; information gathering</h4>
+            <p>Searching for relevant information, comparing options, verifying details, and presenting findings in a clear format.</p>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="work-ability">
+            <h3>Data Entry &amp; Organization</h3>
+            <p>Accurately enter, update, clean, and organize information in spreadsheets, documents, and other digital systems.</p>
+          </div>
+          <div class="work-visual">
+            <img src="images/data_entry.png" alt="Organized business spreadsheet">
+          </div>
+          <div class="work-project">
+            <p class="work-project-label">Support</p>
+            <h4>Structured information</h4>
+            <p>Keeping data accurate, organized, consistent, and easy to access across digital documents and spreadsheets.</p>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="work-ability">
+            <h3>File &amp; Document Organization</h3>
+            <p>Keep digital files, folders, and documents structured, easy to find, and up to date.</p>
+          </div>
+          <div class="work-visual">
+            <img src="images/files.jpg" alt="Organized digital files and folders">
+          </div>
+          <div class="work-project">
+            <p class="work-project-label">Support</p>
+            <h4>Better file organization</h4>
+            <p>Creating logical structures for digital files and documents so information is easier to locate and maintain.</p>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="work-ability">
+            <h3>Document Preparation</h3>
+            <p>Create and format professional documents, spreadsheets, presentations, notes, lists, and other business materials.</p>
+          </div>
+          <div class="work-visual">
+            <img src="images/document.png" alt="Professionally formatted digital documents">
+          </div>
+          <div class="work-project">
+            <p class="work-project-label">Support</p>
+            <h4>Professional digital materials</h4>
+            <p>Preparing clear, organized, and well-formatted documents and digital materials for everyday business needs.</p>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="work-ability">
+            <h3>Customer Support</h3>
+            <p>Handle customer inquiries with clear, professional written communication and help follow up on questions or issues.</p>
+          </div>
+          <div class="work-visual">
+            <img src="images/chat.png" alt="Professional customer support communication interface">
+          </div>
+          <div class="work-project">
+            <p class="work-project-label">Support</p>
+            <h4>Professional customer communication</h4>
+            <p>Responding clearly and professionally while keeping customer questions, follow-ups, and communication organized.</p>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="work-ability">
+            <h3>Task &amp; Administrative Support</h3>
+            <p>Help manage day-to-day tasks, priorities, deadlines, recurring responsibilities, and other administrative work that keeps your business running smoothly.</p>
+          </div>
+          <div class="work-visual">
+            <img src="images/administrativesuppor.png" alt="Task management and administrative support dashboard">
+          </div>
+          <div class="work-project">
+            <p class="work-project-label">Support</p>
+            <h4>Day-to-day administrative help</h4>
+            <p>Supporting routine tasks, organizing priorities, tracking deadlines, and helping keep daily operations on track.</p>
+          </div>
+        </div>
+
+        <div class="additional-skills">
+          <h3>Tools &amp; Additional Skills</h3>
+          <ul>
+            <li>Google Docs</li>
+            <li>Google Sheets</li>
+            <li>Google Slides</li>
+            <li>Google Drive</li>
+            <li>Canva</li>
+            <li>Photoshop</li>
+            <li>Microsoft Office</li>
+            <li>AI Tools</li>
+            <li>Website Creation</li>
+            <li>Photo Editing</li>
+            <li>Video Editing</li>
+            <li>Written Communication</li>
+            <li>Information Management</li>
+            <li>Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION + LANGUAGES -->
+    <section id="education-languages" class="education">
+      <div class="container info-grid">
+        <div class="info-block">
+          <h2>Education</h2>
+          <div class="edu-item">
+            <h3>Professional and Personal Computing Technician</h3>
+            <p class="meta">Técnico en Informática Profesional y Personal · Escuela de Educación Secundaria Técnica N5, 2022-2025</p>
+            <p>Technical secondary education focused on computing, digital technologies, software, hardware, programming fundamentals, and web related skills.</p>
+          </div>
+        </div>
+
+        <div class="info-block" id="languages">
+          <h2>Languages</h2>
+          <div class="lang-item">
+            <div class="lang-item-head">
+              <h3>Spanish</h3>
+              <span>Native</span>
+            </div>
+          </div>
+
+          <div class="lang-item">
+            <div class="lang-item-head">
+              <h3>English</h3>
+              <span>B1+, approaching B2</span>
+            </div>
+            <div class="lang-detail">
+              <span>Reading: advanced, highly comfortable</span>
+              <span>Writing: intermediate</span>
+              <span>Speaking: basic to intermediate</span>
+              <span>Listening: intermediate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Let's work together!</h2>
+        <p class="contact-copy">
+          Interested in working with a reliable, organized remote professional?
+          Get in touch to discuss your project or remote opportunity.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <p class="label">Email</p>
+            <span class="config-link" data-config-link="email">[EMAIL ADDRESS]</span>
+          </div>
+          <div class="contact-item">
+            <p class="label">LinkedIn</p>
+            <span class="config-link" data-config-link="linkedin">[LINKEDIN URL]</span>
+          </div>
+          <div class="contact-item">
+            <p class="label">Location</p>
+            <span>Argentina</span>
+          </div>
+        </div>
+
+        <div class="contact-cta">
+          <a href="#contact" class="btn" data-config-link="email-btn">Contact me</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-meta">
+        <p class="footer-brand">Azul Sofía David</p>
+        <p>Remote Virtual Assistant</p>
+        <p>Administration · Data · Research · Administrative Support</p>
+        <p>Argentina</p>
+      </div>
+
+      <div class="footer-meta">
+        <p><span class="config-link" data-config-link="email">[EMAIL ADDRESS]</span></p>
+        <p><span class="config-link" data-config-link="linkedin">[LINKEDIN URL]</span></p>
+        <p>&copy; <span id="year"></span> Azul Sofía David</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const CONFIG = {
+      email: "azulsofiadavid@gmail.com",
+      linkedin: "https://www.linkedin.com/in/azul-david"
+    };
+
+    function upgradeConfigLinks() {
+      document.querySelectorAll("[data-config-link]").forEach((el) => {
+        const key = el.dataset.configLink;
+        const type = key === "email-btn" ? "email" : key;
+        const value = CONFIG[type];
+        if (!value) return;
+
+        if (key === "email-btn") {
+          el.setAttribute("href", "mailto:" + value);
+          return;
+        }
+
+        const a = document.createElement("a");
+        a.className = "text-link";
+
+        if (type === "email") {
+          a.href = "mailto:" + value;
+          a.textContent = value;
+        } else if (type === "linkedin") {
+          a.href = value;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.textContent = "View profile";
+        }
+
+        el.replaceWith(a);
+      });
+    }
+
+    function initNav() {
+      const toggle = document.querySelector(".nav-toggle");
+      const menu = document.getElementById("nav-menu");
+
+      function closeMenu() {
+        menu.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-open");
+      }
+
+      toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        document.body.classList.toggle("nav-open", isOpen);
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && menu.classList.contains("is-open")) {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      upgradeConfigLinks();
+      initNav();
+      document.getElementById("year").textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
