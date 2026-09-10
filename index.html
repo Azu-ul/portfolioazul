@@ -1,24 +1,31 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Azul Sofía David | Remote Virtual Assistant for Administration · Data · Research · Administrative Support</title>
-  <meta name="description" content="Azul Sofía David is a remote virtual assistant based in Argentina, focused on research, data organization, administrative support and customer support for international clients.">
+  <title>Azul Sofía David | Remote Virtual Assistant for Administration · Data · Research · Administrative Support
+  </title>
+  <meta name="description"
+    content="Azul Sofía David is a remote virtual assistant based in Argentina, focused on research, data organization, administrative support and customer support for international clients.">
   <meta name="author" content="Azul Sofía David">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Azul Sofía David, Remote Virtual Assistant">
-  <meta property="og:description" content="Research, data, administration and customer support for international clients, working remotely from Argentina.">
+  <meta property="og:description"
+    content="Research, data, administration and customer support for international clients, working remotely from Argentina.">
   <meta property="og:image" content="https://azulsofia.vercel.app/workingazu.jpg">
   <meta property="og:url" content="https://azulsofia.vercel.app">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%232A2822'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='26' fill='%23F2ECDE' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%232A2822'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='26' fill='%23F2ECDE' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
@@ -31,11 +38,21 @@
       --max: 1120px;
     }
 
-    *, *::before, *::after { box-sizing: border-box }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
 
-    html { scroll-behavior: auto; overflow-x: hidden; }
+    html {
+      scroll-behavior: auto;
+      overflow-x: hidden;
+    }
+
     @media (prefers-reduced-motion: no-preference) {
-      html { scroll-behavior: smooth }
+      html {
+        scroll-behavior: smooth
+      }
     }
 
     body {
@@ -49,10 +66,19 @@
       overflow-x: hidden;
     }
 
-    img { max-width: 100%; display: block }
-    a { color: inherit }
+    img {
+      max-width: 100%;
+      display: block
+    }
 
-    h1, h2, h3, h4 {
+    a {
+      color: inherit
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
       font-family: 'Fraunces', serif;
       font-weight: 500;
       line-height: 1.15;
@@ -60,9 +86,23 @@
       color: var(--ink);
     }
 
-    p { margin: 0 }
-    ul { margin: 0; padding: 0; list-style: none }
-    button { font: inherit; color: inherit; background: none; border: none; cursor: pointer }
+    p {
+      margin: 0
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      cursor: pointer
+    }
 
     .container {
       max-width: var(--max);
@@ -80,9 +120,15 @@
       z-index: 100;
       transition: top .15s ease;
     }
-    .skip-link:focus { top: 1rem }
 
-    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .skip-link:focus {
+      top: 1rem
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
 
     /* ---------- Header ---------- */
     .site-header {
@@ -123,6 +169,7 @@
       height: 44px;
       padding: 0;
     }
+
     .nav-toggle span {
       width: 22px;
       height: 2px;
@@ -131,9 +178,18 @@
       display: block;
       transition: transform .2s ease, opacity .2s ease;
     }
-    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
 
     .nav-menu {
       position: fixed;
@@ -155,11 +211,22 @@
       transform: translateX(100%);
       transition: transform .28s ease;
     }
+
     @media (prefers-reduced-motion: reduce) {
-      .nav-menu { transition: none }
+      .nav-menu {
+        transition: none
+      }
     }
-    .nav-menu.is-open { transform: translateX(0) }
-    .nav-menu a { text-decoration: none; font-size: 1.4rem; font-family: 'Fraunces', serif; }
+
+    .nav-menu.is-open {
+      transform: translateX(0)
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-family: 'Fraunces', serif;
+    }
 
     .nav-menu-close {
       align-self: flex-end;
@@ -169,8 +236,16 @@
       padding: .4rem;
       margin-bottom: .5rem;
     }
-    .nav-menu-close:hover { color: var(--ink); }
-    @media (min-width:820px) { .nav-menu-close { display: none; } }
+
+    .nav-menu-close:hover {
+      color: var(--ink);
+    }
+
+    @media (min-width:820px) {
+      .nav-menu-close {
+        display: none;
+      }
+    }
 
     .nav-backdrop {
       position: fixed;
@@ -181,13 +256,27 @@
       pointer-events: none;
       transition: opacity .28s ease;
     }
-    .nav-backdrop.is-open { opacity: 1; pointer-events: auto; }
-    @media (min-width:820px) { .nav-backdrop { display: none; } }
 
-    body.nav-open { overflow: hidden }
+    .nav-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
 
     @media (min-width:820px) {
-      .nav-toggle { display: none }
+      .nav-backdrop {
+        display: none;
+      }
+    }
+
+    body.nav-open {
+      overflow: hidden
+    }
+
+    @media (min-width:820px) {
+      .nav-toggle {
+        display: none
+      }
+
       .nav-menu {
         position: static;
         inset: auto;
@@ -204,7 +293,12 @@
         padding: 0;
         justify-content: flex-end;
       }
-      .nav-menu a { font-size: .98rem; font-family: 'Public Sans', sans-serif; font-weight: 500 }
+
+      .nav-menu a {
+        font-size: .98rem;
+        font-family: 'Public Sans', sans-serif;
+        font-weight: 500
+      }
     }
 
     /* ---------- Buttons / links ---------- */
@@ -218,18 +312,43 @@
       font-weight: 500;
       font-size: .95rem;
     }
-    .btn:hover { background: var(--ink); color: var(--paper) }
 
-    .btn-quiet { border-color: var(--accent); color: var(--ink-soft); }
-    .btn-quiet:hover { background: var(--ink); color: var(--paper) }
+    .btn:hover {
+      background: var(--ink);
+      color: var(--paper)
+    }
 
-    .text-link { text-decoration-color: var(--accent); text-underline-offset: 4px; color: var(--ink); font-weight: 500; }
+    .btn-quiet {
+      border-color: var(--accent);
+      color: var(--ink-soft);
+    }
+
+    .btn-quiet:hover {
+      background: var(--ink);
+      color: var(--paper)
+    }
+
+    .text-link {
+      text-decoration-color: var(--accent);
+      text-underline-offset: 4px;
+      color: var(--ink);
+      font-weight: 500;
+    }
 
     /* ---------- Sections ---------- */
-    section { padding-block: clamp(3.5rem, 9vw, 6.5rem) }
+    section {
+      padding-block: clamp(3.5rem, 9vw, 6.5rem)
+    }
 
-    .section-head { max-width: 640px; margin-bottom: clamp(2rem, 5vw, 3rem); }
-    .section-head p { color: var(--ink-soft); margin-top: .85rem }
+    .section-head {
+      max-width: 640px;
+      margin-bottom: clamp(2rem, 5vw, 3rem);
+    }
+
+    .section-head p {
+      color: var(--ink-soft);
+      margin-top: .85rem
+    }
 
     .practice-note {
       margin-top: 1rem;
@@ -247,31 +366,83 @@
     }
 
     /* ---------- Hero ---------- */
-   .hero {
-    padding-top: clamp(3rem, 8vw, 5rem);
-    background-image: linear-gradient(135deg, #ffffff 0%, #EAD3C2 45%, #ebe0d5 100%);
+    .hero {
+      padding-top: clamp(3rem, 8vw, 5rem);
+      background-image: linear-gradient(135deg, #ffffff 0%, #EAD3C2 45%, #ebe0d5 100%);
     }
 
-    .hero .container { display: grid; gap: 2.5rem; align-items: center; }
+    .hero .container {
+      display: grid;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
     @media (min-width:900px) {
-      .hero .container { grid-template-columns: 1.15fr .85fr; gap: 3.5rem }
+      .hero .container {
+        grid-template-columns: 1.15fr .85fr;
+        gap: 3.5rem
+      }
     }
 
-    .hero-copy { animation: rise .6s ease both; }
+    .hero-copy {
+      animation: rise .6s ease both;
+    }
+
     @keyframes rise {
-      from { opacity: 0; transform: translateY(14px) }
-      to { opacity: 1; transform: none }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .hero-copy { animation: none }
+      from {
+        opacity: 0;
+        transform: translateY(14px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
     }
 
-    .hero-role { font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--ink-soft); margin-top: .5rem; }
-    .hero h1 { font-size: clamp(2.75rem, 7vw, 4.75rem) }
-    .hero-tagline { margin-top: 1.5rem; font-size: .95rem; letter-spacing: .02em; color: var(--accent); font-weight: 600; }
-    .hero-intro { margin-top: 1.5rem; max-width: 46ch; font-size: 1.08rem; color: var(--ink-soft); }
-    .hero-location { margin-top: 1rem; font-size: .9rem; color: var(--ink-soft); }
-    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.25rem; }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-copy {
+        animation: none
+      }
+    }
+
+    .hero-role {
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      color: var(--ink-soft);
+      margin-top: .5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.75rem, 7vw, 4.75rem)
+    }
+
+    .hero-tagline {
+      margin-top: 1.5rem;
+      font-size: .95rem;
+      letter-spacing: .02em;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-intro {
+      margin-top: 1.5rem;
+      max-width: 46ch;
+      font-size: 1.08rem;
+      color: var(--ink-soft);
+    }
+
+    .hero-location {
+      margin-top: 1rem;
+      font-size: .9rem;
+      color: var(--ink-soft);
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.25rem;
+    }
 
     .hero-visual {
       aspect-ratio: 4/5;
@@ -286,14 +457,34 @@
       padding: 1rem;
       overflow: hidden;
     }
-    .hero-visual.has-image { padding: 0 }
-    .hero-visual img { width: 100%; height: 100%; object-fit: cover }
+
+    .hero-visual.has-image {
+      padding: 0
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
 
     /* ---------- About ---------- */
-    .about { background: var(--paper); border-top: 1px solid var(--line); }
-    .about .container { display: grid; gap: 2.5rem; }
+    .about {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+    }
+
+    .about .container {
+      display: grid;
+      gap: 2.5rem;
+    }
+
     @media (min-width:900px) {
-      .about .container { grid-template-columns: .8fr 1.2fr; gap: 3.5rem; align-items: start }
+      .about .container {
+        grid-template-columns: .8fr 1.2fr;
+        gap: 3.5rem;
+        align-items: start
+      }
     }
 
     .about-visual {
@@ -308,16 +499,87 @@
       padding: 1rem;
       overflow: hidden;
     }
-    .about-visual.has-image { padding: 0 }
-    .about-visual { aspect-ratio: 10/7; }
-    .about-visual img { width: 100%; height: 100%; object-fit: cover }
 
-    .about-copy p { margin-bottom: 1.15rem; color: var(--ink-soft); max-width: 60ch }
-    .about-copy p:last-child { margin-bottom: 0 }
-    .about-copy strong { color: var(--ink); font-weight: 600 }
+    .about-visual.has-image {
+      padding: 0
+    }
+
+    .about-visual {
+      aspect-ratio: 10/7;
+    }
+
+    .about-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .about-copy p {
+      margin-bottom: 1.15rem;
+      color: var(--ink-soft);
+      max-width: 60ch
+    }
+
+    .about-copy p:last-child {
+      margin-bottom: 0
+    }
+
+    .about-copy strong {
+      color: var(--ink);
+      font-weight: 600
+    }
+
+    .experience {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-item {
+      border-top: 1px solid var(--line);
+      padding-block: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    .experience-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-item h3 {
+      font-size: 1.3rem;
+    }
+
+    .experience-item .meta {
+      color: var(--ink-soft);
+      font-size: .9rem;
+      margin-top: .3rem;
+    }
+
+    .experience-item ul {
+      margin-top: .9rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .experience-item li {
+      color: var(--ink-soft);
+      font-size: .95rem;
+      padding-left: 1.1rem;
+      position: relative;
+      max-width: 60ch;
+    }
+
+    .experience-item li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
 
     /* ---------- Skills & Work ---------- */
-    .work { background: var(--paper); border-top: 1px solid var(--line) }
+    .work {
+      background: var(--paper);
+      border-top: 1px solid var(--line)
+    }
 
     .work-entry {
       border-top: 1px solid var(--line);
@@ -325,13 +587,28 @@
       display: grid;
       gap: 1.5rem;
     }
-    .work-entry:last-of-type { border-bottom: 1px solid var(--line) }
-    @media (min-width:900px) {
-      .work-entry { grid-template-columns: .8fr 1.15fr .85fr; gap: 2rem; align-items: center }
+
+    .work-entry:last-of-type {
+      border-bottom: 1px solid var(--line)
     }
 
-    .work-ability h3 { font-size: 1.5rem }
-    .work-ability p { color: var(--ink-soft); margin-top: .6rem; max-width: 42ch }
+    @media (min-width:900px) {
+      .work-entry {
+        grid-template-columns: .8fr 1.15fr .85fr;
+        gap: 2rem;
+        align-items: center
+      }
+    }
+
+    .work-ability h3 {
+      font-size: 1.5rem
+    }
+
+    .work-ability p {
+      color: var(--ink-soft);
+      margin-top: .6rem;
+      max-width: 42ch
+    }
 
     .work-visual {
       border: 1px solid var(--line);
@@ -342,6 +619,7 @@
       justify-content: center;
       padding: .5rem;
     }
+
     .work-visual img {
       width: auto;
       height: auto;
@@ -352,7 +630,10 @@
       cursor: zoom-in;
       transition: opacity .2s ease;
     }
-    .work-visual img:hover { opacity: .85; }
+
+    .work-visual img:hover {
+      opacity: .85;
+    }
 
     /* ---------- Image modal ---------- */
     .img-modal {
@@ -365,13 +646,18 @@
       padding: clamp(1.5rem, 5vw, 3rem);
       z-index: 200;
     }
-    .img-modal.is-open { display: flex; }
+
+    .img-modal.is-open {
+      display: flex;
+    }
+
     .img-modal img {
       max-width: 95vw;
       max-height: 90vh;
       object-fit: contain;
       background: var(--paper);
     }
+
     .img-modal-close {
       position: absolute;
       top: clamp(1rem, 3vw, 1.75rem);
@@ -384,60 +670,208 @@
       cursor: pointer;
       padding: .25rem .6rem;
     }
-    .img-modal-close:hover { opacity: .8; }
 
-    .work-project { background: var(--card); border: 1px solid var(--line); padding: 1.25rem; }
-    .work-project-label { font-size: .78rem; color: var(--accent); font-weight: 600; margin-bottom: .4rem; }
-    .work-project h4 { font-size: 1.05rem; margin-bottom: .5rem }
-    .work-project p { color: var(--ink-soft); font-size: .95rem; margin-bottom: 1rem }
+    .img-modal-close:hover {
+      opacity: .8;
+    }
 
-    .additional-skills { margin-top: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--line); padding-top: 2rem; }
-    .additional-skills h3 { font-size: 1.1rem; margin-bottom: 1rem }
-    .additional-skills ul { display: flex; flex-wrap: wrap; gap: .6rem }
-    .additional-skills li { font-size: .85rem; color: var(--ink-soft); border: 1px solid var(--line); padding: .35rem .75rem; }
+    .work-project {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 1.25rem;
+    }
+
+    .work-project-label {
+      font-size: .78rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+
+    .work-project h4 {
+      font-size: 1.05rem;
+      margin-bottom: .5rem
+    }
+
+    .work-project p {
+      color: var(--ink-soft);
+      font-size: .95rem;
+      margin-bottom: 1rem
+    }
+
+    .additional-skills {
+      margin-top: clamp(2rem, 4vw, 3rem);
+      border-top: 1px solid var(--line);
+      padding-top: 2rem;
+    }
+
+    .additional-skills h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem
+    }
+
+    .additional-skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem
+    }
+
+    .additional-skills li {
+      font-size: .85rem;
+      color: var(--ink-soft);
+      border: 1px solid var(--line);
+      padding: .35rem .75rem;
+    }
 
     /* ---------- Education & Languages ---------- */
-    .education { border-top: 1px solid var(--line) }
-
-    .info-grid { display: grid; gap: 3rem; }
-    @media (min-width:760px) {
-      .info-grid { grid-template-columns: 1fr 1fr }
+    .education {
+      border-top: 1px solid var(--line)
     }
 
-    .info-block h2 { font-size: clamp(1.6rem, 3vw, 2rem); margin-bottom: 1.5rem }
+    .info-grid {
+      display: grid;
+      gap: 3rem;
+    }
 
-    .edu-item h3 { font-size: 1.2rem }
-    .edu-item .meta { color: var(--ink-soft); font-size: .9rem; margin-top: .3rem }
-    .edu-item p { color: var(--ink-soft); margin-top: .85rem; max-width: 50ch }
+    @media (min-width:760px) {
+      .info-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
 
-    .lang-item { border-top: 1px solid var(--line); padding-block: 1.1rem; }
-    .lang-item:last-child { border-bottom: 1px solid var(--line) }
-    .lang-item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
-    .lang-item-head h3 { font-size: 1.1rem }
-    .lang-item-head span { color: var(--ink-soft); font-size: .9rem }
-    .lang-detail { margin-top: .6rem; display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; font-size: .85rem; color: var(--ink-soft); }
+    .info-block h2 {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      margin-bottom: 1.5rem
+    }
+
+    .edu-item h3 {
+      font-size: 1.2rem
+    }
+
+    .edu-item .meta {
+      color: var(--ink-soft);
+      font-size: .9rem;
+      margin-top: .3rem
+    }
+
+    .edu-item p {
+      color: var(--ink-soft);
+      margin-top: .85rem;
+      max-width: 50ch
+    }
+
+    .lang-item {
+      border-top: 1px solid var(--line);
+      padding-block: 1.1rem;
+    }
+
+    .lang-item:last-child {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .lang-item-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .lang-item-head h3 {
+      font-size: 1.1rem
+    }
+
+    .lang-item-head span {
+      color: var(--ink-soft);
+      font-size: .9rem
+    }
+
+    .lang-detail {
+      margin-top: .6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem 1.25rem;
+      font-size: .85rem;
+      color: var(--ink-soft);
+    }
 
     /* ---------- Contact ---------- */
-    .contact { background: var(--paper); color: var(--ink); border-top: 1px solid var(--line) }
-    .contact h2 { color: var(--ink); font-size: clamp(2rem, 5vw, 3rem) }
-    .contact-copy { max-width: 52ch; margin-top: 1.25rem; color: var(--ink-soft); }
-
-    .contact-grid { margin-top: 2.75rem; display: grid; gap: 1.75rem; }
-    @media (min-width:640px) {
-      .contact-grid { grid-template-columns: repeat(3, 1fr) }
+    .contact {
+      background: var(--paper);
+      color: var(--ink);
+      border-top: 1px solid var(--line)
     }
 
-    .contact-item .label { font-size: .78rem; color: var(--ink-soft); margin-bottom: .5rem; }
-    .contact-item a, .contact-item span { font-size: 1.05rem; text-decoration-color: var(--accent); text-underline-offset: 4px; }
+    .contact h2 {
+      color: var(--ink);
+      font-size: clamp(2rem, 5vw, 3rem)
+    }
 
-    .contact-cta { margin-top: 2.75rem }
+    .contact-copy {
+      max-width: 52ch;
+      margin-top: 1.25rem;
+      color: var(--ink-soft);
+    }
+
+    .contact-grid {
+      margin-top: 2.75rem;
+      display: grid;
+      gap: 1.75rem;
+    }
+
+    @media (min-width:640px) {
+      .contact-grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    .contact-item .label {
+      font-size: .78rem;
+      color: var(--ink-soft);
+      margin-bottom: .5rem;
+    }
+
+    .contact-item a,
+    .contact-item span {
+      font-size: 1.05rem;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 4px;
+    }
+
+    .contact-cta {
+      margin-top: 2.75rem
+    }
 
     /* ---------- Footer ---------- */
-    .site-footer { background: var(--paper); color: var(--ink-soft); border-top: 1px solid var(--line); padding-block: 2.5rem; font-size: .85rem; }
-    .site-footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
-    .footer-brand { color: var(--ink); font-family: 'Fraunces', serif; font-style: italic; font-size: 1.1rem }
-    .footer-meta p { margin-bottom: .35rem }
-    .footer-meta a { text-decoration-color: var(--accent); text-underline-offset: 3px }
+    .site-footer {
+      background: var(--paper);
+      color: var(--ink-soft);
+      border-top: 1px solid var(--line);
+      padding-block: 2.5rem;
+      font-size: .85rem;
+    }
+
+    .site-footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-brand {
+      color: var(--ink);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.1rem
+    }
+
+    .footer-meta p {
+      margin-bottom: .35rem
+    }
+
+    .footer-meta a {
+      text-decoration-color: var(--accent);
+      text-underline-offset: 3px
+    }
   </style>
 </head>
 
@@ -452,12 +886,14 @@
         <span></span><span></span><span></span>
       </button>
 
-        <div class="nav-backdrop" id="nav-backdrop"></div>
-        <nav class="nav-menu" id="nav-menu">
+      <div class="nav-backdrop" id="nav-backdrop"></div>
+      <nav class="nav-menu" id="nav-menu">
         <button class="nav-menu-close" id="nav-menu-close" aria-label="Close menu">&larr;</button>
         <a href="#about">About</a>
         <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
+
       </nav>
     </div>
   </header>
@@ -519,7 +955,9 @@
         <div class="section-head">
           <h2 style="font-size:clamp(1.8rem,4vw,2.5rem)">Work Practice</h2>
           <p>Practical support to help you stay organized, save time, and keep your day-to-day work moving.</p>
-          <p class="practice-note">I'm early in my career and building experience through practice projects like the ones below, built around a fictional client ("Bennett Coaching &amp; Consulting") to show how I actually work while I grow my client history.</p>
+          <p class="practice-note">I'm early in my career and building experience through practice projects like the
+            ones below, built around a fictional client ("Bennett Coaching &amp; Consulting") to show how I actually
+            work while I grow my client history.</p>
           <p class="tap-hint">Tap any image to view it full size.</p>
         </div>
 
@@ -534,14 +972,16 @@
           <div class="work-project">
             <p class="work-project-label">Practice Project</p>
             <h4>Bennett Coaching &amp; Consulting — Inbox Setup</h4>
-            <p>Set up and labeled a sample inbox for a coaching business, sorting client questions, payment confirmations, and admin emails into clear categories for faster follow-up.</p>
+            <p>Set up and labeled a sample inbox for a coaching business, sorting client questions, payment
+              confirmations, and admin emails into clear categories for faster follow-up.</p>
           </div>
         </div>
 
         <div class="work-entry">
           <div class="work-ability">
             <h3>Calendar &amp; Scheduling</h3>
-            <p>Manage appointments, meetings, deadlines, reminders, and schedules while keeping everything organized and conflict-free.</p>
+            <p>Manage appointments, meetings, deadlines, reminders, and schedules while keeping everything organized and
+              conflict-free.</p>
           </div>
           <div class="work-visual">
             <img src="images/calendar.jpg" alt="Weekly schedule for Bennett Coaching & Consulting">
@@ -549,14 +989,16 @@
           <div class="work-project">
             <p class="work-project-label">Practice Project</p>
             <h4>Bennett Coaching &amp; Consulting — Weekly Schedule</h4>
-            <p>Organized a full week of coaching sessions, prep time, and admin blocks on a shared calendar, color-coded by task type.</p>
+            <p>Organized a full week of coaching sessions, prep time, and admin blocks on a shared calendar, color-coded
+              by task type.</p>
           </div>
         </div>
 
         <div class="work-entry">
           <div class="work-ability">
             <h3>Internet Research</h3>
-            <p>Find, compare, and organize relevant information from reliable online sources so you can make informed decisions faster.</p>
+            <p>Find, compare, and organize relevant information from reliable online sources so you can make informed
+              decisions faster.</p>
           </div>
           <div class="work-visual">
             <img src="images/research.png" alt="Scheduling tool comparison document">
@@ -564,14 +1006,16 @@
           <div class="work-project">
             <p class="work-project-label">Practice Project</p>
             <h4>Scheduling Tool Comparison</h4>
-            <p>Compared Calendly, Acuity Scheduling, and SimplyBook.me on price, features, and payment integration, then wrote up a recommendation with sources.</p>
+            <p>Compared Calendly, Acuity Scheduling, and SimplyBook.me on price, features, and payment integration, then
+              wrote up a recommendation with sources.</p>
           </div>
         </div>
 
         <div class="work-entry">
           <div class="work-ability">
             <h3>Data Entry &amp; Organization</h3>
-            <p>Accurately enter, update, clean, and organize information in spreadsheets, documents, and other digital systems.</p>
+            <p>Accurately enter, update, clean, and organize information in spreadsheets, documents, and other digital
+              systems.</p>
           </div>
           <div class="work-visual">
             <img src="images/data_entry.png" alt="Client notes organized into a spreadsheet">
@@ -579,7 +1023,8 @@
           <div class="work-project">
             <p class="work-project-label">Practice Project</p>
             <h4>Client Notes → Client Tracker</h4>
-            <p>Took a set of loose client notes and turned them into a clean, structured spreadsheet with consistent columns, contact info, and follow-up dates.</p>
+            <p>Took a set of loose client notes and turned them into a clean, structured spreadsheet with consistent
+              columns, contact info, and follow-up dates.</p>
           </div>
         </div>
 
@@ -594,14 +1039,16 @@
           <div class="work-project">
             <p class="work-project-label">Practice Project</p>
             <h4>Bennett Coaching &amp; Consulting — Drive Structure</h4>
-            <p>Built a folder system so client files, contracts, invoices, and marketing materials each have a clear, findable home.</p>
+            <p>Built a folder system so client files, contracts, invoices, and marketing materials each have a clear,
+              findable home.</p>
           </div>
         </div>
 
         <div class="work-entry">
           <div class="work-ability">
             <h3>Document Preparation</h3>
-            <p>Create and format professional documents, spreadsheets, presentations, notes, lists, and other business materials.</p>
+            <p>Create and format professional documents, spreadsheets, presentations, notes, lists, and other business
+              materials.</p>
           </div>
           <div class="work-visual">
             <img src="images/document.png" alt="Coaching package invoice">
@@ -609,14 +1056,16 @@
           <div class="work-project">
             <p class="work-project-label">Practice Project</p>
             <h4>Coaching Package Invoice</h4>
-            <p>Designed three invoice styles for different businesses, each with its own branding and color palette, ready to send to clients.</p>
+            <p>Designed three invoice styles for different businesses, each with its own branding and color palette,
+              ready to send to clients.</p>
           </div>
         </div>
 
         <div class="work-entry">
           <div class="work-ability">
             <h3>Customer Support</h3>
-            <p>Handle customer inquiries with clear, professional written communication and help follow up on questions or issues.</p>
+            <p>Handle customer inquiries with clear, professional written communication and help follow up on questions
+              or issues.</p>
           </div>
           <div class="work-visual">
             <img src="images/chat.png" alt="Customer support conversations across Instagram, WhatsApp, and email">
@@ -624,14 +1073,16 @@
           <div class="work-project">
             <p class="work-project-label">Practice Project</p>
             <h4>Multi-Channel Client Support</h4>
-            <p>Answered a pricing inquiry on Instagram, handled a quick reschedule on WhatsApp, and managed a renewal request by email, adapting tone to each channel.</p>
+            <p>Answered a pricing inquiry on Instagram, handled a quick reschedule on WhatsApp, and managed a renewal
+              request by email, adapting tone to each channel.</p>
           </div>
         </div>
 
         <div class="work-entry">
           <div class="work-ability">
             <h3>Task &amp; Administrative Support</h3>
-            <p>Help manage day-to-day tasks, priorities, deadlines, recurring responsibilities, and other administrative work that keeps your business running smoothly.</p>
+            <p>Help manage day-to-day tasks, priorities, deadlines, recurring responsibilities, and other administrative
+              work that keeps your business running smoothly.</p>
           </div>
           <div class="work-visual">
             <img src="images/administrative-support.png" alt="Notion task board for Bennett Coaching & Consulting">
@@ -639,7 +1090,8 @@
           <div class="work-project">
             <p class="work-project-label">Practice Project</p>
             <h4>Weekly Ops Board</h4>
-            <p>Set up a Notion board to track a coaching business's weekly tasks, from content creation to client follow-ups, sorted by status.</p>
+            <p>Set up a Notion board to track a coaching business's weekly tasks, from content creation to client
+              follow-ups, sorted by status.</p>
           </div>
         </div>
 
@@ -665,6 +1117,43 @@
       </div>
     </section>
 
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-head">
+          <h2 style="font-size:clamp(1.8rem,4vw,2.5rem)">Work Experience</h2>
+        </div>
+
+        <div class="experience-item">
+          <h3>Etsy Shop — Digital Products</h3>
+          <p class="meta">2025 – Present · Remote</p>
+          <ul>
+            <li>Ran an Etsy shop selling digital products (digital planners)</li>
+            <li>Wrote SEO-optimized titles, descriptions, and tags for each listing</li>
+            <li>Handled pricing, product research, and customer messages</li>
+            <li>Used Printify to design and manage print-on-demand products</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <h3>Freelance Video Editor — U.S.-based Music Band</h3>
+          <p class="meta">2026 · Remote</p>
+          <ul>
+            <li>Edited video content for a band based in the U.S., following their briefs and feedback</li>
+            <li>Delivered final videos on agreed deadlines, communicating directly with the client</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <h3>Social Media &amp; Communication — Family Business</h3>
+          <p class="meta">2023</p>
+          <ul>
+            <li>Managed a Spanish-language social media account, handling posts and comments</li>
+            <li>Answered customer questions and coordinated communication for the business</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- EDUCATION + LANGUAGES -->
     <section id="education-languages" class="education">
       <div class="container info-grid">
@@ -672,8 +1161,10 @@
           <h2>Education</h2>
           <div class="edu-item">
             <h3>Professional and Personal Computing Technician</h3>
-            <p class="meta">Técnico en Informática Profesional y Personal · Escuela de Educación Secundaria Técnica N5, 2022-2025</p>
-            <p>Technical secondary education focused on computing, digital technologies, software, hardware, programming fundamentals, and web related skills.</p>
+            <p class="meta">Técnico en Informática Profesional y Personal · Escuela de Educación Secundaria Técnica N5,
+              2022-2025</p>
+            <p>Technical secondary education focused on computing, digital technologies, software, hardware, programming
+              fundamentals, and web related skills.</p>
           </div>
         </div>
 
@@ -793,11 +1284,11 @@
       });
     }
 
-      function initNav() {
-        const toggle = document.querySelector(".nav-toggle");
-        const menu = document.getElementById("nav-menu");
-        const backdrop = document.getElementById("nav-backdrop");
-        const closeBtn = document.getElementById("nav-menu-close");
+    function initNav() {
+      const toggle = document.querySelector(".nav-toggle");
+      const menu = document.getElementById("nav-menu");
+      const backdrop = document.getElementById("nav-backdrop");
+      const closeBtn = document.getElementById("nav-menu-close");
 
       function closeMenu() {
         menu.classList.remove("is-open");
@@ -813,8 +1304,8 @@
         document.body.classList.toggle("nav-open", isOpen);
       });
 
-       backdrop.addEventListener("click", closeMenu);
-       closeBtn.addEventListener("click", closeMenu);
+      backdrop.addEventListener("click", closeMenu);
+      closeBtn.addEventListener("click", closeMenu);
 
       menu.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", closeMenu);
@@ -877,4 +1368,5 @@
     });
   </script>
 </body>
+
 </html>
